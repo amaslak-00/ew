@@ -28,5 +28,6 @@ public class Anime {
     private Integer numberOfSeasons;
     private LocalDate dateOfPremiere;
     private Boolean isOngoing;
+    private String description;
 
 }
