@@ -1,5 +1,6 @@
 package animeweb.demo.registration;
 
+import animeweb.demo.user.User;
 import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Controller;
@@ -18,8 +19,9 @@ public class RegistrationController {
     private final RegistrationService registrationService;
 
     @PostMapping
-    public String register(@RequestBody RegistrationRequest request){
+    public User register(@RequestBody RegistrationRequest request){
         return registrationService.register(request);
     };
+
 
 }

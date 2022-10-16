@@ -10,6 +10,7 @@ import javax.persistence.*;
 import javax.swing.text.StyledEditorKit;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.UUID;
 
 @Entity
 @Setter
@@ -36,13 +37,15 @@ public class User implements UserDetails {
     private UserRole userRole;
     private Boolean locked = false;
     private Boolean enabled = false;
+    private UUID token;
 
-    public User(String firstName, String lastName, String email, String password, UserRole userRole ){
+    public User(String firstName, String lastName, String email, String password, UserRole userRole){
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.password = password;
         this.userRole = userRole;
+        this.token = UUID.randomUUID();
 
     }
 
