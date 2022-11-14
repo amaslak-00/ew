@@ -25,5 +25,6 @@ public class UserAnime {
     @ManyToOne
     @JoinColumn(name = "anime_id")
     private Anime anime;
+    private String comment;
 
 }
